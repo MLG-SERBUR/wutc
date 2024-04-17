@@ -1,0 +1,38 @@
+REM Enable Double Tap to wake
+Reg add "HKLM\SYSTEM\TOUCH\Settings" /v WakeUpGestureSupported /t REG_DWORD /d 1 /f
+Reg add "HKLM\SYSTEM\TOUCH\Settings" /v EnableWakeUpGesture /t REG_DWORD /d 1 /f
+Reg add "HKLM\SYSTEM\TOUCH\Settings" /v WakeUpGesture /t REG_DWORD /d 1 /f
+Reg add "HKLM\SYSTEM\TOUCH\Settings\FF" /v WakeUpGestureSupported /t REG_DWORD /d 1 /f
+Reg add "HKLM\SYSTEM\TOUCH\Settings\FF" /v EnableWakeUpGesture /t REG_DWORD /d 1 /f
+Reg add "HKLM\SYSTEM\TOUCH\Settings\FF" /v WakeUpGesture /t REG_DWORD /d 1 /f
+Reg add "HKLM\SOFTWARE\OEM\Nokia\Touch\WakeupGesture" /v Enabled /t REG_DWORD /d 1 /f
+Reg add "HKLM\SOFTWARE\OEM\Nokia\Touch\WakeupGesture" /v ProxyDetected /t REG_DWORD /d 1 /f
+
+REM Enable Work With Gloves (Supersensitive)
+Reg add "HKLM\SYSTEM\TOUCH\Settings" /v ImprovedTouchSupported /t REG_DWORD /d 1 /f
+Reg add "HKLM\SYSTEM\TOUCH\Settings\FF" /v ImprovedTouchSupported /t REG_DWORD /d 1 /f
+
+REM Enable Hey Cortana
+Reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\AudioPolicy" /v Duplex /t REG_DWORD /d 00000002 /f
+Reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\AudioPolicy" /v HardwareVoiceActivationInSKU /t REG_DWORD /d 00000000 /f
+Reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\AudioPolicy" /v SoftwareSpeakerIDInSKU /t REG_DWORD /d 00000001 /f
+Reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\AudioPolicy" /v SoftwareVoiceActivationInSKU /t REG_DWORD /d 00000001 /f
+Reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\AudioPolicy" /v VoiceActivationAlwaysUseHWKWS /t REG_DWORD /d 00000001 /f
+Reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\AudioPolicy" /v VoiceActivationEnableWoV /t REG_DWORD /d 00000001 /f
+
+REM Enable sim contact export/import
+Reg add "HKLM\Software\Microsoft\Contacts\SIM" /v EnableSIMAddressBookAndExport /t REG_DWORD /d 1 /f
+
+REM "Increase SD card performance with eMMC bus"
+Reg add "HKLM\SYSTEM\ControlSet001\Services\SdBus\Parameters" /v DisableHS200Support /t REG_DWORD /d 0 /f
+
+REM Disable spectre and meltdown
+Reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettingsOverride /t REG_DWORD /d 3 /f
+Reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v FeatureSettingsOverrideMask /t REG_DWORD /d 3 /f
+
+REM Virtual memory
+Reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v PagingFiles /t REG_MULTI_SZ /d "u:\pagefile.sys 1024 1024" /f
+
+REM Set default App Installer
+Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v ".appx" /t REG_SZ /d "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe" /f
+Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v ".appxbundle" /t REG_SZ /d "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe" /f
