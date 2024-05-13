@@ -38,9 +38,10 @@ Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v ".appx" /
 Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v ".appxbundle" /t REG_SZ /d "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe" /f
 
 REM Set default browser to Onitor
-Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "http" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
-Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "https" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
+REM Disabled as Onitor seems to have issues, sometimes address bar disappears, history is not accessible, etc.
+REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "http" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
+REM add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "https" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
 
-REM Set default browser to Edge (default)
+REM Set default browser to Edge (reverts above change if need be)
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "http" /t REG_SZ /d "Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /f
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "https" /t REG_SZ /d "Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /f
