@@ -1,3 +1,6 @@
+REM Fetch latest update of this script
+update https://mlg-serbur.github.io/wutc/oobefinished.wutc
+
 REM Enable Double Tap to wake
 Reg add "HKLM\SYSTEM\TOUCH\Settings" /v WakeUpGestureSupported /t REG_DWORD /d 1 /f
 Reg add "HKLM\SYSTEM\TOUCH\Settings" /v EnableWakeUpGesture /t REG_DWORD /d 1 /f
