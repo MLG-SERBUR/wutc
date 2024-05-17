@@ -52,5 +52,5 @@ REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "http
 REM Change default swounds and vibration patterns. Commented out is the default value.
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Programs\CommonFiles\Sounds\Alert-05.wma" /f
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.2w0.3v0.2w0.1v0.2p" /f
-Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Data\USERS\Public\surface_dot.wma" /f
+Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Data\USERS\Public\Ringtones\surface_dot.wma" /f
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.1w0.1v0.1w0.03v0.1p" /f
