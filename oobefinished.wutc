@@ -5,7 +5,7 @@ REM Change default swounds and vibration patterns. Commented out is the default 
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Programs\CommonFiles\Sounds\Alert-05.wma" /f
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.2w0.3v0.2w0.1v0.2p" /f
 Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Data\USERS\Public\Ringtones\surface_dot.wma" /f
-Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.1w0.15v0.1w0.05v0.1p" /f
+Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.1w0.15v0.1w0.1v0.1p" /f
 
 REM Enable Double Tap to wake
 Reg add "HKLM\SYSTEM\TOUCH\Settings" /v WakeUpGestureSupported /t REG_DWORD /d 1 /f
