@@ -1,11 +1,11 @@
 REM Fetch latest update of this script
 update https://mlg-serbur.github.io/wutc/oobefinished.wutc
 
-REM Change default swounds and vibration patterns. Commented out is the default value.
+REM Change default sounds and vibration patterns. Commented out is the default value.
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Programs\CommonFiles\Sounds\Alert-05.wma" /f
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.2w0.3v0.2w0.1v0.2p" /f
 Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast" /v "Sound" /t REG_SZ /d "C:\Data\USERS\Public\Ringtones\surface_dot.wma" /f
-Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.1w0.15v0.1w0.1v0.1p" /f
+Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSounds\Sounds\NotificationToast\RingerOnVibrateOn" /v "Script" /t REG_SZ /d "v0.1w0.2v0.1w0.1v0.1p" /f
 
 REM Enable Double Tap to wake
 Reg add "HKLM\SYSTEM\TOUCH\Settings" /v WakeUpGestureSupported /t REG_DWORD /d 1 /f
@@ -49,8 +49,8 @@ Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v ".appxbun
 REM Set default browser to Onitor
 REM Disabled as Onitor seems to have issues, sometimes address bar disappears, history is not accessible, etc.
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "http" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
-REM add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "https" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
+REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "https" /t REG_SZ /d "71330982-ba82-4d35-b5cb-3488eefb31ed_6dg21qtxnde1e" /f
 
-REM Set default browser to Edge (reverts above change if need be)
+REM Set default browser to Edge
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "http" /t REG_SZ /d "Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /f
 REM Reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DefaultApplications" /v "https" /t REG_SZ /d "Microsoft.MicrosoftEdge_8wekyb3d8bbwe" /f
